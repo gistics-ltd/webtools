@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #181512;
+  --ink-soft: #2b2722;
+  --ink-line: #3a352f;
+  --ink-muted: #6b645a;
+  --paper: #f5f0e7;
+  --surface: #fffcf7;
+  --line: #ded5c7;
+  --frame: #1c3b38;
+  --frame-soft: #274b47;
+  --gold: #e8ae1c;
+  --gold-soft: #f7e3ac;
+  --flame: #e83e1c;
+  --peach: #f8ddd1;
+  --blush: #f3dde2;
+  --sage: #e2eadf;
+  --sky: #dee9e8;
+  --focus: #b85f18;
+}
+
+@theme {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-line: var(--ink-line);
+  --color-ink-muted: var(--ink-muted);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-frame: var(--frame);
+  --color-frame-soft: var(--frame-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-flame: var(--flame);
+  --color-peach: var(--peach);
+  --color-blush: var(--blush);
+  --color-sage: var(--sage);
+  --color-sky: var(--sky);
+  --color-brand-white: #ffffff;
+
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  /* [[CONFIRM: licensed Host Grotesk and Mallana font files were not supplied.]]
+     Replace with next/font/local when available. */
+  --font-wordmark: "Host Grotesk", var(--font-open-sans), ui-sans-serif, sans-serif;
+  --font-tagline: "Mallana", "Brush Script MT", "Segoe Script", cursive;
+}
+
+@layer base {
+  html {
+    height: 100%;
+    overflow: hidden;
+    overflow: clip;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    height: 100%;
+    overflow: hidden;
+    overflow: clip;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+    letter-spacing: -0.4px;
+  }
+
+  ::selection {
+    background-color: var(--gold);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  [id] {
+    scroll-margin-top: 1rem;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-pad {
+    @apply py-12 sm:py-14 lg:py-16;
+  }
+
+  .page-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .page-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold leading-tight text-ink transition-colors duration-150 hover:bg-[#f2c04a] active:bg-[#d9a114];
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-ink/20 bg-transparent px-5 py-3 text-sm font-bold leading-tight text-ink transition-colors duration-150 hover:border-ink hover:bg-ink hover:text-brand-white;
+  }
+
+  .btn-dark {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-bold leading-tight text-brand-white transition-colors duration-150 hover:bg-ink-soft;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-ink/20 bg-transparent px-5 py-3 text-sm font-bold leading-tight text-ink transition-colors duration-150 hover:border-ink hover:bg-ink hover:text-brand-white;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-ink/20 bg-transparent px-5 py-3 text-sm font-bold leading-tight text-ink transition-colors duration-150 hover:border-ink hover:bg-ink hover:text-brand-white;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.18em];
+  }
+
+  .focusable {
+    @apply focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-gold;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-bold text-ink;
+  }
+
+  .field-hint {
+    @apply mt-1.5 text-xs leading-relaxed text-ink-muted;
+  }
+
+  .field-error {
+    @apply mt-1 text-sm font-semibold text-flame;
+  }
+
+  .input-base {
+    @apply min-h-11 w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-base text-ink placeholder:text-ink-muted/70 focus-visible:border-flame focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-gold;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

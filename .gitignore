@@ -41,3 +41,6 @@ next-env.d.ts
 
 # local/internal documentation
 README.internal.md
+
+#Local Scripts
+/scripts/generate-brand-assets.mjs

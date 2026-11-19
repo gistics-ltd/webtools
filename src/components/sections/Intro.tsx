@@ -11,7 +11,7 @@ const highlights = [
 
 export function Intro() {
   return (
-    <section id="about" className="section-pad bg-paper pt-20" aria-labelledby="intro-heading">
+    <section id="about" className="section-pad bg-paper pt-16" aria-labelledby="intro-heading">
       <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.75fr)] lg:items-start lg:gap-14">
         <div>
           <SectionHeading

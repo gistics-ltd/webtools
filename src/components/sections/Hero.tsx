@@ -3,6 +3,7 @@ import path from "node:path";
 import { CheckCircle2, Phone, Zap } from "lucide-react";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
+import { versionedPublicAsset } from "@/lib/public-asset";
 
 const trustItems = [
   "Chauffeur-driven",
@@ -11,15 +12,16 @@ const trustItems = [
   "Responsive support",
 ];
 
-const heroSrc = "/images/hero/hero-image.png";
+const heroPath = "/images/hero/hero-image.png";
 
 export function Hero() {
-  const heroAvailable = existsSync(path.join(process.cwd(), "public", heroSrc));
+  const heroAvailable = existsSync(path.join(process.cwd(), "public", heroPath));
+  const heroSrc = versionedPublicAsset(heroPath);
 
   return (
     <section
       id="top"
-      className="flex min-h-full flex-col bg-surface"
+      className="flex min-h-full shrink-0 flex-col bg-surface"
       aria-labelledby="hero-heading"
     >
       <div className="grid flex-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
@@ -81,7 +83,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="border-t border-line/30 bg-surface">
+      <div className="shrink-0 border-t border-line/30 bg-surface">
         <div className="container-page py-4.5">
           <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-ink-muted sm:text-sm">
             {trustItems.map((item) => (

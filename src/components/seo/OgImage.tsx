@@ -19,93 +19,91 @@ export function renderOgImage() {
   const logo = logoDataUri();
 
   return new ImageResponse(
-    (
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        background: "#f5f0e7",
+        color: "#181512",
+        padding: "64px 72px",
+        position: "relative",
+      }}
+    >
       <div
         style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          background: "#0D0D0D",
-          color: "#FFFFFF",
-          padding: "64px 72px",
-          position: "relative",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 16,
+          background: "#f5f0e7",
         }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: 16,
-            background: "#E83E1C",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            right: -120,
-            top: 90,
-            width: 480,
-            height: 480,
-            borderRadius: 240,
-            background: "#E8AE1C",
-            opacity: 0.12,
-          }}
-        />
-        <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-          {logo ? (
-            <img
-              src={logo}
-              width={334}
-              height={86}
-              alt=""
-              style={{ objectFit: "contain", objectPosition: "left center" }}
-            />
-          ) : (
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 52, fontWeight: 800, letterSpacing: 2 }}>GISTICS</div>
-              <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: 12, color: "#E8AE1C" }}>
-                LIMITED
-              </div>
+      />
+      <div
+        style={{
+          position: "absolute",
+          right: -120,
+          top: 90,
+          width: 480,
+          height: 480,
+          borderRadius: 240,
+          background: "#f5f0e7",
+          opacity: 0.12,
+        }}
+      />
+      <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
+        {logo ? (
+          <img
+            src={logo}
+            width={334}
+            height={86}
+            alt=""
+            style={{ objectFit: "contain", objectPosition: "left center" }}
+          />
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ fontSize: 52, fontWeight: 800, letterSpacing: 2 }}>GISTICS</div>
+            <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: 12, color: "#181512" }}>
+              LIMITED
             </div>
-          )}
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div
-            style={{
-              fontSize: 64,
-              lineHeight: 1.05,
-              fontWeight: 800,
-              maxWidth: 940,
-              letterSpacing: -1,
-            }}
-          >
-            {SITE_TITLE}
           </div>
-          <div style={{ fontSize: 27, color: "#D4D4D4", maxWidth: 900, lineHeight: 1.35 }}>
-            {SITE_DESCRIPTION}
-          </div>
-        </div>
+        )}
+      </div>
 
+      <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            fontSize: 24,
-            color: "#E8AE1C",
-            fontWeight: 700,
+            fontSize: 64,
+            lineHeight: 1.05,
+            fontWeight: 800,
+            maxWidth: 940,
+            letterSpacing: -1,
           }}
         >
-          <div>Chauffeur · Corporate · Journey</div>
-          <div>Kampala · Entebbe · Uganda</div>
+          {SITE_TITLE}
+        </div>
+        <div style={{ fontSize: 27, color: "#3a352f", maxWidth: 900, lineHeight: 1.35 }}>
+          {SITE_DESCRIPTION}
         </div>
       </div>
-    ),
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          fontSize: 24,
+          color: "#181512",
+          fontWeight: 700,
+        }}
+      >
+        <div>Chauffeur · Corporate · Long-distance</div>
+        <div>Kampala · Entebbe · Uganda</div>
+      </div>
+    </div>,
     ogSize,
   );
 }

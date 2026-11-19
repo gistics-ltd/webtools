@@ -62,7 +62,7 @@ export const fleet: Vehicle[] = [
   {
     slug: "toyota-hiace-van",
     name: "Toyota Hiace van",
-    seats: 12,
+    seats: 10,
     transmission: "Automatic",
     fuel: "Petrol",
     features: [
@@ -75,8 +75,7 @@ export const fleet: Vehicle[] = [
     driverFeePerDayUGX: 0,
     image: "/images/fleet/toyota-hiace-van.jpg",
     imageAlt: "Toyota Hiace 14-seat van for group car hire in Kampala",
-    disabledLook: true,
-    badge: "On request",
+
   },
   // {
   //   slug: "safari-land-cruiser-pop-up",

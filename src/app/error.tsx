@@ -1,8 +1,7 @@
 "use client";
 
-import { Home, MessageCircle, Phone, RotateCcw } from "lucide-react";
+import { Home, RotateCcw } from "lucide-react";
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
 
 export default function ErrorPage({
   reset,
@@ -43,15 +42,6 @@ export default function ErrorPage({
             Contact us
           </Link> */}
         </div>
-        <p className="mt-6 text-sm text-ink-muted">
-          <a
-            href={`tel:${siteConfig.phone.tel}`}
-            className="focusable font-bold text-ink underline underline-offset-4"
-          >
-            <Phone aria-hidden="true" className="mr-1 inline" size={14} />
-            {siteConfig.phone.display}
-          </a>
-        </p>
       </div>
     </div>
   );

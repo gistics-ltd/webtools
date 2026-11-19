@@ -4,7 +4,7 @@ import { faqs } from "@/data/faqs";
 
 export function FaqSection() {
   return (
-    <section id="faq" className="section-pad bg-paper" aria-labelledby="faq-heading">
+    <section id="faq" className="section-pad bg-paper pt-10" aria-labelledby="faq-heading">
       <div className="container-page grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:items-start lg:gap-14">
         <div className="lg:sticky lg:top-8">
           <SectionHeading

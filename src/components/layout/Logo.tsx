@@ -15,7 +15,7 @@ export function Logo({ variant = "white", tone = "white" }: LogoProps) {
     <Link
       href="/"
       aria-label="Gistics Limited home"
-      className="focusable inline-flex items-center rounded-sm"
+      className="focusable inline-flex shrink-0 items-center rounded-sm"
     >
       {tile ? (
         <span className="flex items-center rounded p-1.5">

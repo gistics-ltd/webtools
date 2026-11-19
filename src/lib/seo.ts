@@ -6,9 +6,9 @@ import { faqs } from "@/data/faqs";
 /** Reserved placeholder domain used if NEXT_PUBLIC_SITE_URL is not set. */
 const FALLBACK_SITE_URL = "https://gistics.co.ug";
 
-export const SITE_TITLE = "Car Hire in Kampala, Uganda | Gistics";
+export const SITE_TITLE = "Car Hire by Gistics Ltd";
 export const SITE_DESCRIPTION =
-  "Affordable car hire for city trips, airport transfers, long-distance travel and corporate teams. Get a price estimate before you book.";
+  "Affordable car hire for city trips, airport transfers, long-distance travel, safari trips and corporate teams. Get a price estimate before you book.";
 export const OG_IMAGE_ALT = "Gistics Limited car hire company in Kampala and across Uganda";
 export const OG_IMAGE_URL = "/opengraph-image";
 export const TWITTER_IMAGE_URL = "/twitter-image";

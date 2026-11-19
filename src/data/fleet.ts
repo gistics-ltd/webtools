@@ -62,7 +62,7 @@ export const fleet: Vehicle[] = [
   {
     slug: "toyota-hiace-van",
     name: "Toyota Hiace van",
-    seats: 12,
+    seats: 10,
     transmission: "Automatic",
     fuel: "Petrol",
     features: [

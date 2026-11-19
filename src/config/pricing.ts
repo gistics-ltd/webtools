@@ -7,7 +7,7 @@ export const pricingConfig = {
   roundToUGX: 1_000,
 
   /** Display-only USD conversion. Not a live FX rate. */
-  usdDisplayRateUGX: 3_800,
+  usdDisplayRateUGX: 4_200,
 
   /** 1–30 days is the normal online range; longer stays are quoted manually. */
   maxStandardDays: 30,

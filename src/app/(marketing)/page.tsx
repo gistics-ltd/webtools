@@ -49,7 +49,7 @@ export default function HomePage() {
       <Hero />
       <Intro />
       <QuoteSection />
-      {/* <FleetSection /> */}
+      <FleetSection />
       <FaqSection />
       <ContactSection />
     </>

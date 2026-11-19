@@ -83,9 +83,6 @@ export function FleetSection() {
                   </span>
                   <span className="text-xs font-semibold text-ink-muted">/ day</span>
                 </div>
-                <p className="mt-1 text-[11px] leading-relaxed text-ink-muted">
-                  Excludes VAT (18%). Driver extra.
-                </p>
 
                 <div className="mt-auto pt-4">
                   <QuoteRequestButton

@@ -6,10 +6,10 @@ export function Footer({ onHome }: { onHome: boolean }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="flex min-h-16 shrink-0 flex-wrap items-center justify-between gap-x-4 gap-y-2 border-t border-line/20 bg-surface px-5 py-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-8 lg:px-12">
+    <footer className="flex min-h-16 shrink-0 items-center justify-between gap-x-4 gap-y-2 border-t border-line/40 bg-surface px-5 py-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-8 lg:px-12">
       <Logo tone="ink" />
 
-      <div className="order-3 w-full text-center text-[11px] leading-relaxed text-ink-muted sm:order-none sm:w-auto sm:text-xs sm:text-center">
+      <div className="order-3 w-full text-right text-[11px] leading-relaxed text-ink-muted sm:order-none sm:w-auto sm:text-center sm:text-xs">
         © {year} {siteConfig.name}
         <p>
           Designed by{" "}
@@ -25,10 +25,13 @@ export function Footer({ onHome }: { onHome: boolean }) {
         </p>
       </div>
 
-      <nav aria-label="Footer navigation" className="flex items-center gap-3 sm:gap-5">
+      <nav
+        aria-label="Footer navigation"
+        className="flex hidden items-center gap-3 sm:gap-5 sm:flex"
+      >
         <a
           href={sectionHref("contact", onHome)}
-          className="focusable hidden rounded-sm text-xs font-semibold text-ink-muted hover:text-ink sm:block"
+          className="focusable rounded-sm text-xs font-semibold text-ink-muted hover:text-ink"
         >
           Contact
         </a>

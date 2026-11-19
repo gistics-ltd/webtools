@@ -4,6 +4,7 @@ import { QuoteRequestButton } from "@/components/fleet/QuoteRequestButton";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fleet } from "@/data/fleet";
 import { formatUGX } from "@/lib/format";
+import { versionedPublicAsset } from "@/lib/public-asset";
 
 export function FleetSection() {
   return (
@@ -14,7 +15,7 @@ export function FleetSection() {
             id="fleet-heading"
             eyebrow="Fleet"
             title="A vehicle for every itinerary."
-            description="Land Cruisers for safari, a Prado for upcountry comfort, or a van for the whole group. Guide rates exclude VAT and availability is confirmed on request."
+            description="Land Cruisers for upcountry comfort, a Prado for safari, or a van for the whole group. Guide rates exclude VAT and availability is confirmed on request."
           />
           <a
             href="#contact"
@@ -32,7 +33,7 @@ export function FleetSection() {
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-paper">
                 <Image
-                  src={vehicle.image}
+                  src={versionedPublicAsset(vehicle.image)}
                   alt={vehicle.imageAlt}
                   width={800}
                   height={600}
